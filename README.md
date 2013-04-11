@@ -5,15 +5,21 @@ A Ruby gem that add Privacy Settings to RoR application quickly and easily
 
 ## Update your Gemfile
 In order to use the Privacy Setting module, add the following gem to your Gemfile in Rails application
+
 	gem 'privacy_setting', :git => 'https://github.com/xuanchien/privacy_setting'
+
 You will need to run `bundle install` to update your Gemfile.lock
 
 ## How to use?
 ### Migrations
 Run the following command to install the necessary files for this gem
+
 	rails g privacy_setting
+
 Update the database to the latest migration.
+
 	rake db:migrate
+
 This PrivacySetting module needs to store settings in database. By default, this table is called ps_setting 
 ### Privacy Scopes
 There are three privacy scopes that is used in this Privacy Settings module, they are PUBLIC, FRIENDS_ONLY and PRIVATE. 
@@ -107,9 +113,11 @@ In order to identify each object, we use the `id` property on that object to sto
 ## Credits
 
 Author: Chien Tran
+
 Contributors: You are welcome
 
 ## License
 
 Copyright (c) 2013
+
 Licensed under the MIT license (see MIT-LICENSE file)
