@@ -6,7 +6,7 @@ A Ruby gem that add Privacy Settings to RoR application quickly and easily
 ## Update your Gemfile
 In order to use the Privacy Setting module, add the following gem to your Gemfile in Rails application
 
-	gem 'privacy_setting', :git => 'https://github.com/xuanchien/privacy_setting'
+	gem 'privacy_setting'
 
 You will need to run `bundle install` to update your Gemfile.lock
 
@@ -106,7 +106,7 @@ When using Privacy Setting module, each object has to be owned by an user in ord
 Notice that the object returned from this method has to be the model that already includes `UserPermission` module
 
 ##### Object Id
-In order to identify each object, we use the `id` property on that object to store in setting table. If you want to identify through other property, you can override the `privacy_object_id` method
+In order to identify each object, we use the `id` property on that object to store in setting table. If you want to identify using other property, you can override the `privacy_object_id` method
 
 	def privacy_object_id
 		//return an id that uniquely identified this object
