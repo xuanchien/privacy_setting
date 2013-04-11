@@ -85,9 +85,11 @@ If you want the user to be able to set the privacy scope on particular kind of o
 There is one rule you have to follow: each object must have its owner. By default, only the object owner can set privacy setting for that object. For example:
 
 	post = Post.new
-	post.set_privacy_scope(PrivacySetting::PUBLIC)
+	post.privacy_scope = PrivacySetting::PUBLIC
+	puts post.privacy_scope
 
 The above code will set the privacy setting of `post` to PUBLIC. 
+
 Any user can check for permission on this particular object by using the method `has_permission_with?` on that object. For example
 
 	//return true or false
