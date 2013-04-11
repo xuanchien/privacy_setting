@@ -34,7 +34,7 @@ There are two special modules in privacy_setting gem that can be integrated into
 This module has to be included in your user model. 
 
 	class User < ActiveRecord::Base
-		include UserPermission
+		include PrivacySetting::UserPermission
 	end
 
 After including this module, your module will be able to set and get the privacy setting on particular section of your website. Let's say you define a section called "user_profile" on your website. A certain user can set privacy setting for this section like this
@@ -79,7 +79,7 @@ In the above example, we use simple rule that two users will be friend if their 
 If you want the user to be able to set the privacy scope on particular kind of object, you will need to include this module in that object model. For example, you have a model called `Post` in your application and you want to allow any user to add the privacy scope for that object. Here is what you need to do:
 
 	class Post < ActiveRecord::Base
-		include ObjectPermission
+		include PrivacySetting::ObjectPermission
 	end
 
 There is one rule you have to follow: each object must have its owner. By default, only the object owner can set privacy setting for that object. For example:
